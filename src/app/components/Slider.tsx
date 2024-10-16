@@ -62,6 +62,7 @@ function Slider() {
                 src={slide.img}
                 alt={slide.title}
                 fill
+                sizes="100%"
                 className="object-cover rounded-lg"
               />
             </div>
