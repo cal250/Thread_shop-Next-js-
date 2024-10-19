@@ -43,21 +43,21 @@ function Slider() {
         {slides.map((slide) => (
           <div
             key={slide.id}
-            className={`flex-shrink-0 w-full h-full ${slide.bg} flex items-center justify-between p-8`}
+            className={`${slide.bg} w-screen h-full flex flex-col gap-16 xl:flex-row`}
           >
             {/* TEXTCONTAINER */}
-            <div className="max-w-md">
-              <h2 className="text-2xl font-bold mb-4">{slide.description}</h2>
-              <h1 className="text-4xl font-extrabold mb-6">{slide.title}</h1>
+            <div className="h-1/2 xl:w-1/2 flex items-center justify-center gap-8 flex-col 2xl:gap-12 text-center ">
+              <h2 className="text-xl lg:text-3xl 2xl:text-5xl">{slide.description}</h2>
+              <h1 className="text-5xl lg:text-6xl 2xl:text-8xl font-semibold">{slide.title}</h1>
               <Link href={slide.url}>
-                <button className="px-6 py-2 bg-black text-white rounded-md">
+                <button className="px-4 py-3 bg-black text-white rounded-md">
                   SHOP NOW
                 </button>
               </Link>
             </div>
 
             {/* IMAGECONTAINER */}
-            <div className="relative w-[400px] h-[500px]">
+            <div className="h-1/2 xl:w-1/2 relative">
               <Image
                 src={slide.img}
                 alt={slide.title}
